@@ -2,19 +2,19 @@ package com.example.em_project;
 
 import jakarta.persistence.*;
 
-@Entity  // Marks this as a JPA entity
-@Table(name = "employees")  // Maps to the "employees" table in the database
+@Entity
+@Table(name = "employees")
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Auto-generates the ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String firstname;
     private String lastname;
     private String email;
 
-    // Constructors
+
     public Employee() {}
 
     public Employee(Long id, String firstname, String lastname, String email) {
@@ -24,7 +24,7 @@ public class Employee {
         this.email = email;
     }
 
-    // Getters and setters
+
     public Long getId() {
         return id;
     }
